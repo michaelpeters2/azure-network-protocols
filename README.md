@@ -23,17 +23,29 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
+- Create Sample File Shares With Various Permissions
 - Step 2
 - Step 3
 - Step 4
 
 <h2>Actions and Observations</h2>
 
+Create Sample File Shares With Various Permissions
+-
+1) Log into Domain Controller (DC-1) as your domain admin account ((mydomain.com\jane_admin)
+2) Log into Client-1 as a normal user (mydomain\<someuser>) (Password1)
+3) On DC-1, on the C:\ drive, create 4 folders: “read-access”, “write-access”, “no-access”, “accounting”
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/michaelpeters2/azure-network-protocols/assets/141062110/19169ee3-e138-4be2-b280-5f0e773bdb3f)
+
 </p>
 <p>
+4) Set the following permissions (share the folder) for the “Domain Users” group:
+5) Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
+6) Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+7) Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+(Skip accounting for now)
 
 </p>
 <br />
