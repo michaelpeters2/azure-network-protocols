@@ -24,8 +24,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
 - Create Sample File Shares With Various Permissions
-- Step 2
-- Step 3
+- Attempt to Access File Shares as a Normal User
+- Create an “ACCOUNTANTS” Security Group, Assign Permissions, and Test Access
 - Step 4
 
 <h2>Actions and Observations</h2>
@@ -42,21 +42,26 @@ Create Sample File Shares With Various Permissions
 </p>
 <p>
 4) Set the following permissions (share the folder) for the “Domain Users” group:
+  
 5) Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
-6) Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
-7) Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+
+7) Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+
+8) Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+
 (Skip accounting for now)
 
-</p>
-<br />
-
+Attempt to Access File Shares as a Normal User
+-
+9) On Client-1, navigate to the shared folder (start, run, \\dc-1)
+10) Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/michaelpeters2/azure-network-protocols/assets/141062110/355c89e4-cb02-4d02-9731-178ee00ccd4e)
+
 </p>
 <p>
 
-</p>
-<br />
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
