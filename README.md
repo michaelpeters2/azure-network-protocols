@@ -26,7 +26,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Create Sample File Shares With Various Permissions
 - Attempt to Access File Shares as a Normal User
 - Create an “ACCOUNTANTS” Security Group, Assign Permissions, and Test Access
-- Step 4
 
 <h2>Actions and Observations</h2>
 
