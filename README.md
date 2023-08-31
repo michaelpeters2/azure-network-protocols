@@ -61,12 +61,23 @@ Attempt to Access File Shares as a Normal User
 
 </p>
 <p>
+  
+Create an “ACCOUNTANTS” Security Group, Assign Permissions, and Test Access
+-
+11) Go back to DC-1, in Active Directory, create a security group called “ACCOUNTANTS”
+12) On the “accounting” folder you created earlier, set the following permissions:
+13) Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
 
+![image](https://github.com/michaelpeters2/azure-network-protocols/assets/141062110/3aed3dbc-aeb1-4979-b00f-5c6757c08a53)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+14) On Client-1, as  <someuser>, try to access the accountants folder. It should fail.
 
-</p>
-<br />
+15) Log out of Client-1 as  <someuser>
+
+16) On DC-1, make <someuser> a member of the “ACCOUNTANTS”  Security Group
+
+17) Sign back into Client-1 as <someuser> and try to access the “accounting” share in \\DC-1\ - Does it work now?
+
+It should! You now seem to have an idea of the basics of Network File Shares and Permissions!
